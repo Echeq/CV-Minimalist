@@ -5,7 +5,7 @@ import { projects } from "@/cv-en.json"
 ---
 
 
-<Section title="Projects">
+<Section title="Projects & Side projects ">
     <ul>
         {
             projects.map(({ name, isActive, description, url, highlights 
@@ -15,19 +15,40 @@ import { projects } from "@/cv-en.json"
                         <article>
                             <header>
                                 <h3> 
-                                    <a href={url} title=`View the project ${name}`}>
-                                        <h3>{name}</h3>
-                                    </a>
                                     {
-                                        isActive && <span>&bull;</span>
+                                        url 
+                                            ? (
+                                                <a href={url} title={`View the project ${name}`}>
+                                                    <h3>{name}
+                                                        {
+                                                            isActive !== undefined && (
+                                                                <span style={`color: ${isActive ? '#7CFC00' : '#DC143C'}`}>
+                                                                    &bull;
+                                                                </span>
+                                                            )
+                                                        }
+                                                    </h3>
+                                                </a>
+                                            )
+                                            : (
+                                                <h3>{name}
+                                                    {
+                                                        isActive !== undefined && (
+                                                            <span style={`color: ${isActive ? '#7CFC00' : '#DC143C'}`}>
+                                                                &bull;
+                                                            </span>
+                                                        )
+                                                    }
+                                                </h3>
+                                            )
                                     }
                                 </h3>
                                 <p>{description}</p>
                             </header>
                             
                             <footer>
-                                {highlights.map((highlights) =>{
-                                    return <span>{highlights}</span>
+                                {highlights.map((highlight) =>{
+                                    return <span>{highlight}</span>
                                 })}
                             </footer>
                         </article>
@@ -51,6 +72,8 @@ import { projects } from "@/cv-en.json"
             /* If not fit on 200px, this line will add 1 more column*/
             minmax(200px, 1fr)
         )
+        gap: 1rem;
+        margin-inline: -16px;
     }
     
     article{
@@ -72,11 +95,7 @@ import { projects } from "@/cv-en.json"
         font-size: 0.75rem;
         line-height: 1.2rem;
         margin-bottom: 4px;
-    }
-
-    article h3 span{
-        color: rgb(0, 255, 64);
-   
+        text-align: justify;
     }
 
     article h3{
@@ -85,10 +104,11 @@ import { projects } from "@/cv-en.json"
 
     article a{
         color: #111;
+        text-decoration: none; /* Remove underline by default */
     }
 
     article a:hover{
-        text-decoration: underline;
+        text-decoration: underline; /* Add underline only on hover */
     }
 
     footer{

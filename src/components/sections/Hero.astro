@@ -4,11 +4,23 @@ import { basics } from '@/cv-en.json'
 import Section from '../Section.astro'
 import Mail from '@/icons/Mail.astro'
 import WorldMap from '@/icons/WorldMap.astro'
+import Github from '@/icons/Github.astro'
+import LinkedIn from '@/icons/LinkedIn.astro'
+import type { SocialIcon } from "@/types"
 
 
 const { name, label, location, email, image, profiles} = basics
 const { city, country,address } = location
 
+const SOCIAL_ICONS: SocialIcon = {
+  Github,
+  LinkedIn
+}
+
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
+const linkedUrl = linkedInfo?.url
+
+const printInfo = [email].filter(Boolean).join(" • ")
 
 ---
 
@@ -21,23 +33,38 @@ const { city, country,address } = location
               <WorldMap />
                 {address}, {city}, {country}
             </span>
-            <footer> 
-              
 
+            <footer class="print">
+                {printInfo}
+            </footer>
+
+
+            <footer class="no-print">
                 {
                     email && (
                         <a 
-                            href={'mailto:${email}'}
-                            title={'Send an email to ${name} at ${email}'}
+                            href={`mailto:${email}`}
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             <Mail />
                         </a>)
                     }
+                {
+                  profiles.map(({ network, url, username })=> {
+                    const Icon = SOCIAL_ICONS[network]
 
-                  
-
+                    return (
+                      <a 
+                        href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Icon />
+                        </a>
+                    )
+                  })
+                }
             </footer>
           </div>
           <figure>
@@ -92,6 +119,7 @@ const { city, country,address } = location
   }
 
   footer{
+    font-size: 0.85rem;
     display: flex;
     gap: 4px;
     margin-top: 8px;
@@ -114,6 +142,23 @@ const { city, country,address } = location
   footer a:hover {
     background: #eee;
     border: 1px solid #ddd;
+  }
+
+  @media print {
+    .no-print{
+      display: none !important;
+    }
+  }
+
+  .print {
+    display: none !important;
+
+  }
+
+  @media print {
+    .print {
+      display: block !important;
+    }
   }
 
 </style>

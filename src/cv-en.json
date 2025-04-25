@@ -6,7 +6,7 @@
       "email": "3659397757@qq.com",
       "phone": "(912) 555-4321",
       "url": "https://github.com/Echeq",
-      "summary": "askdjsadjsakjdsad ",
+      "summary": "International student originally from Panama with experience in web design and technical translation. Although I have worked on web design projects and collaborated on translations to optimize communication between cultures, my true passion lies in creating software to solve practical problems and in video game development. Currently, I am exploring desktop application development and have worked on a video game project, which has allowed me to learn about programming logic, problem-solving, and interactive storytelling. I enjoy tackling technical challenges and optimizing solutions to make them scalable and efficient. I am always looking for opportunities to learn, collaborate, and contribute to innovative projects that allow me to continue growing as a developer. ",
       "location": {
         "address": "Huazhong University of Science and Technology",
         "city": "Wuhan",
@@ -21,110 +21,111 @@
     "work": [
     {
       "name": "Auvimax Digital",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
-      "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
-      "highlights": [
-        "Started the company"
-      ]
+      "position": "Web Administrator",
+      "startDate": "2019",
+      "endDate": "2022",
+      "summary": "Responsible for uploading new products to the website, optimizing product listings for searchability and customer engagement."
     },
     {
-      "name": "Clinica Condado del Rey",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
-      "highlights": [
-        "Started the company"
-      ]
-    },
-    {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
-      "highlights": [
-        "Started the company"
-      ]
-    }
-  ],
-    "volunteer": [{
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": [
-        "Awarded 'Volunteer of the Month'"
-      ]
+      "name": "Clinica Condado - 惠民诊所",
+      "position": "Freelance Web Developer & Translation to Chinese",
+      "startDate": "2023",
+      "endDate": "2025",
+      "summary": "Collaborated closely with the client to understand their requirements and deliver a solution that met both technical and business needs."
     }],
     "education": [{
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
-      ]
-    }],
-    "awards": [{
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }],
-    "certificates": [{
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }],
-    "publications": [{
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }],
+      "institution": "Colegio Agustiniano Nuestra Señora del Buen Consejo",
+      "area": "Elementary School and Highschool",
+      "startDate": "2009",
+      "endDate": "2020"
+    },
+    {
+    "institution": "Priceton Academy",
+      "area": "Finance & English",
+      "startDate": "2020",
+      "endDate": "2022"
+    },
+    {
+      "institution": "The Technological University of Panama",
+        "area": "Software Engineering",
+        "startDate": "2022",
+        "endDate": "2022"
+    },
+    {
+      "institution": "China University of Geosciences",
+          "area": "Chinese Language",
+          "startDate": "2022",
+          "endDate": "2023"
+      },
+    {
+      "institution": "Huazhong University of Science and Technology",
+          "area": "Software Engineering",
+          "startDate": "2023",
+          "endDate": null
+        }
+  ],
     "skills": [{
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ]
+      "name": "C Language"
+    },
+    {
+      "name": "Python"
+    },
+    {
+      "name": "Java"
+    },
+    {
+      "name": "Linux Systems"
+    },
+    {
+      "name": "Godot"
+    },
+    {
+      "name": "Git"
+    },
+    {
+      "name": "SQL"
+    },
+    {
+      "name": "Flask"
+    },
+    {
+      "name": "FastAPI"
+    }],
+    "projects": [
+    {
+      "name": "Beat-It",
+      "isActive": false,
+      "description": "2D rhythm game where the player controls a character and must hit markers that come from above and below. The game features different modes: a single-player mode where the player can upload their own music to convert it and adjust the difficulty to create a challenging experience, a two-player multiplayer mode, and a boss mode. Currently, the game is no longer being updated.",
+      "highlights": [
+        "Project Manager & Lead Programmer"
+      ],
+      "url": "https://github.com/MrJunnest/Beat-IT"
+    },
+    {
+      "name": "Social Engineering Security Auditor Software",
+      "isActive": false,
+      "description": "It is a cybersecurity auditing tool designed to identify vulnerabilities in systems through controlled social engineering simulations. Its implementation involves sending an .exe file, which can be obfuscated to make its analysis more difficult. If the audit is successful, the information can be sent to Telegram or Discord. This tool is for private use only and is no longer supported.",
+      "highlights": [
+        "Integration Developer"
+      ],
+      "url": ""
+    },
+    {
+      "name": "Malware Analysis Sandbox Laboratory",
+      "isActive": true,
+      "description": "An open-source educational tool designed to simulate and analyze the behavior of malware in a controlled environment. The software provides a user-friendly interface where users can select specific functionalities to simulate a malware-like behavior. Upon execution, the program displays a clear and non-intrusive notification on the target machine's screen (e.g., a label in the top-right corner) indicating that the system is part of a simulated infection for educational purposes. This ensures safe and ethical usage while providing valuable insights into how malware operates.",
+      "highlights": [
+        "Software Developer"
+      ],
+      "url": ""
     }],
     "languages": [{
-      "language": "English",
-      "fluency": "Native speaker"
-    }],
-    "interests": [{
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }],
-    "references": [{
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }],
-    "projects": [{
-      "name": "Project",
-      "isActive": "true",
-      "description": "",
-      "highlights": [
-        "Won award at AIHacks 2016"
-      ],
-      "url": "https://project.com/"
+      "name": "English"
+    },
+    {
+      "name": "Spanish"
+    },
+    {
+      "name": "Chinese"
     }]
   }

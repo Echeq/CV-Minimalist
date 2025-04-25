@@ -7,7 +7,7 @@ import Hero from '@/components/sections/Hero.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Skills from '@/components/sections/Skills.astro';
 import About from '@/components/sections/About.astro';
-
+import LanguageSkills from '@/components/sections/LanguageSkills.astro';
 
 import KeyboardManager from '@/components/KeyboardManager.astro';
 
@@ -18,11 +18,17 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 <Layout title = "CV Minimalist">
 		<main>
 			<Hero />
+			<hr />
 			<About />
+			<hr />
 			<Experience />
+			<hr />
 			<Education />
+			<hr />
 			<Projects />
+			<hr />
 			<Skills />
+			<LanguageSkills />
 		</main>
 
 		<KeyboardManager />
@@ -33,5 +39,8 @@ import KeyboardManager from '@/components/KeyboardManager.astro';
 		padding: 4rem;
 		margin: auto;
 		width: 100%;
+	}
+	hr{
+		width: 700px;
 	}
 </style>
