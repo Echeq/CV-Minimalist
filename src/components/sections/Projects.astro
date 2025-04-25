@@ -1,24 +1,36 @@
----
-import Section from "../Section.astro"
+    ---
+    import Section from "../Section.astro"
 
-import { projects } from "@/cv-en.json"
----
+    import { projects } from "@/cv-en.json"
+    ---
 
 
-<Section title="Projects & Side projects ">
-    <ul>
-        {
-            projects.map(({ name, isActive, description, url, highlights 
-            }) =>{
-                return(
-                    <li>
-                        <article>
-                            <header>
-                                <h3> 
-                                    {
-                                        url 
-                                            ? (
-                                                <a href={url} title={`View the project ${name}`}>
+    <Section title="Projects & Side projects ">
+        <ul>
+            {
+                projects.map(({ name, isActive, description, url, highlights 
+                }) =>{
+                    return(
+                        <li>
+                            <article>
+                                <header>
+                                    <h3> 
+                                        {
+                                            url 
+                                                ? (
+                                                    <a href={url} title={`View the project ${name}`}>
+                                                        <h3>{name}
+                                                            {
+                                                                isActive !== undefined && (
+                                                                    <span style={`color: ${isActive ? '#7CFC00' : '#DC143C'}`}>
+                                                                        &bull;
+                                                                    </span>
+                                                                )
+                                                            }
+                                                        </h3>
+                                                    </a>
+                                                )
+                                                : (
                                                     <h3>{name}
                                                         {
                                                             isActive !== undefined && (
@@ -28,103 +40,91 @@ import { projects } from "@/cv-en.json"
                                                             )
                                                         }
                                                     </h3>
-                                                </a>
-                                            )
-                                            : (
-                                                <h3>{name}
-                                                    {
-                                                        isActive !== undefined && (
-                                                            <span style={`color: ${isActive ? '#7CFC00' : '#DC143C'}`}>
-                                                                &bull;
-                                                            </span>
-                                                        )
-                                                    }
-                                                </h3>
-                                            )
-                                    }
-                                </h3>
-                                <p>{description}</p>
-                            </header>
-                            
-                            <footer>
-                                {highlights.map((highlight) =>{
-                                    return <span>{highlight}</span>
-                                })}
-                            </footer>
-                        </article>
+                                                )
+                                        }
+                                    </h3>
+                                    <p>{description}</p>
+                                </header>
+                                
+                                <footer>
+                                    {highlights.map((highlight) =>{
+                                        return <span>{highlight}</span>
+                                    })}
+                                </footer>
+                            </article>
 
-                    </li>
-                
-                )
+                        </li>
+                    
+                    )
 
-            })
+                })
+            }
+        </ul>
+    </Section>
+
+
+    <style>
+        ul {
+            display: grid;
+            /* This line will help to auto display 1fr or 1fr 1fr or 1fr 1fr 1fr*/
+            grid-template-columns: repeat(
+                auto-fit, 
+                /* If not fit on 200px, this line will add 1 more column*/
+                minmax(200px, 1fr)
+            )
+            gap: 1rem;
+            margin-inline: -16px;
         }
-    </ul>
-</Section>
+        
+        article{
+            border-radius: 8px;
+            border: 1px solid #f2f2f2;
+            gap: 16px;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            height: 100%;
+        }
+        
+        article header{
+            /* Correct the white space behind (footer)*/
+            flex: 1;
+        }
 
+        article p{
+            font-size: 0.75rem;
+            line-height: 1.2rem;
+            margin-bottom: 4px;
+            text-align: justify;
+        }
 
-<style>
-    ul {
-        display: grid;
-        /* This line will help to auto display 1fr or 1fr 1fr or 1fr 1fr 1fr*/
-        grid-template-columns: repeat(
-            auto-fit, 
-            /* If not fit on 200px, this line will add 1 more column*/
-            minmax(200px, 1fr)
-        )
-        gap: 1rem;
-        margin-inline: -16px;
-    }
-    
-    article{
-        border-radius: 8px;
-        border: 1px solid #f2f2f2;
-        gap: 16px;
-        display: flex;
-        flex-direction: column;
-        padding: 16px;
-        height: 100%;
-    }
-    
-    article header{
-        /* Correct the white space behind (footer)*/
-        flex: 1;
-    }
+        article h3{
+        margin-bottom: 4px; 
+        }
 
-    article p{
-        font-size: 0.75rem;
-        line-height: 1.2rem;
-        margin-bottom: 4px;
-        text-align: justify;
-    }
+        article a{
+            color: #111;
+            text-decoration: none; /* Remove underline by default */
+        }
 
-    article h3{
-       margin-bottom: 4px; 
-    }
+        article a:hover{
+            text-decoration: underline; /* Add underline only on hover */
+        }
 
-    article a{
-        color: #111;
-        text-decoration: none; /* Remove underline by default */
-    }
-
-    article a:hover{
-        text-decoration: underline; /* Add underline only on hover */
-    }
-
-    footer{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        font-size: 0.6rem;
-    }
-    
-    footer span{
-        border-radius: 6px;
-        background: #777;
-        color: white;
-        font-size: 0.6rem;
-        font-weight: 500;
-        padding: 0.2rem 0.6rem;
-        display: inline-flex;
-    }
-</style>
+        footer{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            font-size: 0.6rem;
+        }
+        
+        footer span{
+            border-radius: 6px;
+            background: #777;
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 500;
+            padding: 0.2rem 0.6rem;
+            display: inline-flex;
+        }
+    </style>

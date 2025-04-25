@@ -6,7 +6,7 @@
       "email": "3659397757@qq.com",
       "phone": "(912) 555-4321",
       "url": "https://github.com/Echeq",
-      "summary": "International student originally from Panama with experience in web design and technical translation. Although I have worked on web design projects and collaborated on translations to optimize communication between cultures, my true passion lies in creating software to solve practical problems and in video game development. Currently, I am exploring desktop application development and have worked on a video game project, which has allowed me to learn about programming logic, problem-solving, and interactive storytelling. I enjoy tackling technical challenges and optimizing solutions to make them scalable and efficient. I am always looking for opportunities to learn, collaborate, and contribute to innovative projects that allow me to continue growing as a developer. ",
+      "summary": "International student originally from Panama with experience in web design and technical translation. Although I have worked on web design projects and collaborated on translations to optimize communication between cultures, my true passion lies in creating software to solve practical problems and in video game development.",
       "location": {
         "address": "Huazhong University of Science and Technology",
         "city": "Wuhan",
@@ -127,5 +127,14 @@
     },
     {
       "name": "Chinese"
+    }],
+    "competitions": [
+    {
+      "name": "Hackathon 2025 by CloudWeGo",
+      "description": "Cloud-native microservices struggle with protocol fragmentation (Thrift/REST), causing code bloat and performance loss (30% overhead with HTTP conversion). The goal is to enhance the Kitex framework with a dual-protocol engine. The top solution will join CloudWeGo’s open-source ecosystem to eliminate protocol barriers and accelerate microservices globally.",
+      "highlights": [
+        "Third place Winner"
+      ],
+      "url": "https://github.com/Echeq/Hackhaton2025-ByteDance"
     }]
   }
